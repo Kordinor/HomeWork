@@ -9,41 +9,45 @@ namespace Rextester
     {
         public static void Main(string[] args)
         {
+            double c;
             Console.WriteLine("Введите первое число");
-            int a = Int32.Parse(Console.ReadLine());
+            double a = Int32.Parse(Console.ReadLine());
             Console.WriteLine("Введите действие");
             string action = Console.ReadLine();
             Console.WriteLine("Введите второе число");
-            int b = Int32.Parse(Console.ReadLine());
-            switch(action){
+            double b = Int32.Parse(Console.ReadLine());
+            switch (action)
+            {
                 case "+":
                     Console.Write(a + " + " + b + " = ");
-                    a = a+b;
+                    a = a + b;
                     Console.Write(a);
                     break;
-                 case "-":
+                case "-":
                     Console.Write(a + " - " + b + " = ");
-                    a = a-b;
+                    a = a - b;
                     Console.Write(a);
                     break;
-                 case "/":
-                    if(b!=0){
+                case "/":
+                    if (b != 0)
+                    {
                         Console.Write(a + " / " + b + " = ");
-                        a = a/b;
-                        Console.Write(a);
+                        c = a / b;
+                        Console.Write(c);
                     }
-                    else{
-                       Console.Write("Деление на ноль");
+                    else
+                    {
+                        Console.Write("Деление на ноль");
                     }
                     break;
-                 case "*":
+                case "*":
                     Console.Write(a + " * " + b + " = ");
-                    a = a*b;
+                    a = a * b;
                     Console.Write(a);
                     break;
                 case "%":
                     Console.Write(a + " % " + b + " = ");
-                    a = a%b;
+                    a = a % b;
                     Console.Write(a);
                     break;
                 default:
